@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chrome Web Blog Post</title>
+<meta name="keywords" content="Chrome Web, Blog Page, CSS, HTML, free template, templatemo" />
+<meta name="description" content="Chrome Web Blog - free CSS template brought to you by templatemo.com" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/ddsmoothmenu.js">
+
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+<script>
+function popo(){
+	window.alert(window.location.toString());
+FB.ui(
+  {
+    method: 'feed',
+    name: '2013台大電機營！',
+    link: window.location.toString(),
+    picture: 'http://labs.lavjaveler.com/wp-content/uploads/2007/10/rubber-duck.thumbnail.jpg',
+    caption: 'EEcamp 2013',
+    description: 'XD QQ Orz'
+  },
+  function(response) {
+    if (response && response.post_id) {
+      alert('Post was published.');
+    } else {
+      alert('Post was not published.');
+    }
+  }
+);}
+function NewCommentBox(author, pic_url, date , time , comment, commentboxNumber , blackorwhite)
+			{
+				
+				var new_item = document.createElement('li');
+				new_item.innerHTML = '<ol class="comments"><li><div class="comment_box commentbox'+blackorwhite;
+				new_item.innerHTML += '"><div class="gravatar"><img src="images/avator.png" alt="author 6"/></div><div class="comment_text"><div class="comment_author">'+author+'<span class="date">'+date+'</span><span class="time">'+time+'</span></div><p>'+commmet+'</p></div><div class="cleaner"></div></div></li></ol>';
+				
+
+				/*var _name = name;
+				if(_name === '') _name = 'NoName';
+				_name = _name.replace(/</gi, '&lt;');
+				says = says.replace(/</gi, '&lt;');
+				user_head.innerHTML = (_name + ' : ');
+				user_head.setAttribute('contenteditable', false);
+				user_head.setAttribute('color', "777700");
+				new_item.innerHTML = '<span>' + says + '</span>';
+				new_item.setAttribute('contenteditable', false);
+
+				close_button.className = 'close pull-right';
+				close_button.innerHTML = '&times;';
+				close_button.style.visibility = 'hidden';
+				new_item.insertBefore(close_button, new_item.firstChild);
+				new_item.insertBefore(user_head, new_item.firstChild);
+
+				if(todolist.hasChildNodes())
+				{
+					todolist.insertBefore(new_item, todolist.firstChild);
+				}
+				else 
+				{
+					todolist.appendChild(new_item);
+				}
+				todo_input.value = '';
+				*/
+			}
+
+
+</script>
+<script type="text/javascript" src="//connect.facebook.net/en_US/all.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script type="text/javascript">
+  // Additional JS functions here
+  var name_g,pic_url_g;
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '411284312282740', // App ID
+      channelUrl : '//r444b.ee.ntu.edu.tw/togeather/xd/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+};
+(function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+function login() {
+    FB.login(function(response) {
+        if (response.authResponse) {
+            // connected
+			FB.api('/me', function(response) {
+				//window.alert(response.name);
+				$("#sss").attr("uid",response.id);
+       		    $(supername).val(response.name);
+   		    });
+			
+			FB.api('/me/picture?type=normal', function(response) {
+			$("#superpic_url").attr("src",response.data.url);
+			$("#superpic_url").show();
+			});
+			
+			
+        } else {
+            // cancelled
+        }
+    	}); 
+	};
+function logout(){
+	FB.logout(function(response) {
+  // user is now logged out
+  $(supername).val("");
+  $("#superpic_url").hide();
+});
+	}
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=411284312282740";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="templatemo_wrapper">
+
+	<div id="templatemo_header">
+    
+    	<div id="site_title">
+    	  <h1><a href="about.html" target="_parent">Free CSS Templates</a></h1></div>
+        
+        <div id="templatemo_menu" class="ddsmoothmenu">
+            <ul>
+              	<li><a href="index.html">Home</a></li>
+          		<li><a href="about.html">About</a>
+                    <ul>
+                        <li><a href="http://www.templatemo.com/page/1">Background</a></li>
+                        <li><a href="http://www.templatemo.com/page/2">Our Team</a></li>
+                        <li><a href="http://www.templatemo.com/page/3">Management</a></li>
+                  	</ul>
+              	</li>
+          		<li><a href="portfolio.html">Portfolio</a>
+                    <ul>
+                        <li><a href="http://www.templatemo.com/page/1">Web Design</a></li>
+                        <li><a href="http://www.templatemo.com/page/2">Multimedia</a></li>
+                        <li><a href="http://www.templatemo.com/page/3">3D Animations</a></li>
+                        <li><a href="http://www.templatemo.com/page/4">Templates</a></li>
+                  	</ul>
+              	</li>
+              	<li><a href="blog.html">聊天室啦XD</a>
+                	<ul>
+                        <li><a href="http://www.templatemo.com/page/1">Useful Tips</a></li>
+                        <li><a href="http://www.templatemo.com/page/2">Archives</a></li>
+                        <li><a href="http://www.templatemo.com/page/3">Popular Posts</a></li>
+                        <li><a href="http://www.templatemo.com/page/4">Comments</a></li>
+                        <li><a href="http://www.templatemo.com/page/5">Authors</a></li>
+                  	</ul>
+                </li>
+              	<li><a href="contact.html">Contact</a></li>
+            </ul>
+            <br style="clear: left" />
+        </div> <!-- end of templatemo_menu -->
+        
+    </div> <!-- end of header -->
+    
+    <div id="templatemo_main">
+    	<div id="templatemo_content">
+    	
+            <div class="post_box">
+                <div class="post_header">
+                    <div class="post_date">
+                        26<span>OCT</span>
+                    </div>
+                    <h2>New Blog Post Title</h2>
+                </div>
+                <div class="post_inner"> <a href="http://www.flashmo.com"><img src="images/post_image/01.jpg"  alt="Image" /></a>
+                    <p class="post_meta"><span class="cat">Posted in <a href="#">Templates</a>, <a href="#">Web Design </a></span> | <a href="#">Comments - 256</a>                    </p>
+                    <p>test p1</p>
+                    <p align="justify">test p2</p>
+</div>
+			</div> <!-- end of post -->
+            
+            
+            
+            
+            <div class="cleaner h30"></div>
+                        <h3>聊天室暫時要寫在這裡啦XD</h3>
+                        
+              <div id="comment_section">
+                <ol class="comments first_level">
+                        
+                        <li>
+                            <div class="comment_box commentbox1">
+                                    
+                                <div class="gravatar"> <a href="#"><img src="images/avator.png" alt="author 3" /></a>
+                              </div>
+                                
+                                <div class="comment_text">
+                                    <div class="comment_author">Stephen <span class="date">November 22, 2048</span> <span class="time">11:25 pm</span></div>
+                                    <p>AAAAAAAAAAAAAAAAA</p>
+                                  <div class="reply"><a href="#">Reply</a></div>
+                                </div>
+                                <div class="cleaner"></div>
+                            </div>                        
+                            
+                        </li>
+                        
+                        <li>
+                        
+                        
+                            	<ol class="comments">
+                            
+                                    <li>
+                                        <div class="comment_box commentbox2">
+                                        
+                                        <div class="gravatar"> <a href="#"><img src="images/avator.png" alt="author 5" /></a>
+                                        </div>
+                                        <div class="comment_text">
+                                        <div class="comment_author">Joshua <span class="date">November 24, 2048</span> <span class="time">10:50 pm</span></div>
+                                        <p> bbbbbbbbbbbbbbbbbbbbb</p>
+                                        </div>
+                                        
+                                        <div class="cleaner"></div>
+                                        </div>                        
+                                    
+                                    
+                                    </li>
+                                    
+                                    <li>                            
+                                        <ol class="comments">
+                                    
+                                            <li>
+                                                <div class="comment_box commentbox1">
+                                                
+                                                    <div class="gravatar"> <a href="#"><img src="images/avator.png"  /></a>
+                                                  </div>
+                                                    <div class="comment_text">
+                                                        <div class="comment_author">Daniel <span class="date">November 26, 2048</span> <span class="time">11:22 am</span></div>
+                                                        <p> ccccccccccccccc</p>
+                                                    </div>
+                                                    
+                                                    <div class="cleaner"></div>
+                                                </div>                        
+                                                
+                                                
+                                            </li>
+                                    
+                                        </ol>
+
+                        
+                        			</li>
+                                </ol>
+                                
+						</li>
+                        
+                        <li>
+                            <div class="comment_box commentbox2">
+                                    
+                                     
+                                <div class="gravatar"> <a href="#"><img src="images/avator.png" alt="author 4" /></a>
+                              </div>
+                                <div class="comment_text">
+                                    <div class="comment_author">Edward <span class="date">November 28, 2048</span> <span class="time">07:55 am</span></div>
+                                    <p> BBBBBBBBBBBBBBBBBBB</p>
+                                  <div class="reply"><a href="#">Reply</a></div>
+                                </div>
+                                
+                                <div class="cleaner"></div>
+                            </div>                        
+                            
+                            
+                        </li>
+                        
+                        <li>
+                            <div class="comment_box commentbox1">
+                                    
+                                <div class="gravatar"> <a href="#"><img src="images/avator.png" alt="author 5" /></a>
+                              </div>
+                                <div class="comment_text">
+                                    <div class="comment_author">Collen <span class="date">November 30, 2048</span> <span class="time">08:30 am</span></div>
+                                    <p style="font-size:20px">臣亮言：先帝創業未半，而中道崩殂；今天下三分，益州疲敝，此誠危急存亡之秋也。然侍衛之臣，不懈於內；忠志之士，忘身於外者：蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。宮中府中，俱為一體；陟罰臧否，不宜異同：若有作奸犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。侍中、侍郎郭攸之、費依、董允等，此皆良實，志慮忠純，是以先帝簡拔以遺陛下：愚以為宮中之事，事無大小，悉以咨之，然後施行，必得裨補闕漏，有所廣益。將軍向寵，性行淑均，曉暢軍事，試用之於昔日，先帝稱之曰“能”，是以眾議舉寵為督：愚以為營中之事，事無大小，悉以咨之，必能使行陣和穆，優劣得所也。親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不嘆息痛恨於桓、靈也！侍中、尚書、長史、參軍，此悉貞亮死節之臣也，願陛下親之、信之，則漢室之隆，可計日而待也。</p>
+                                  <div class="reply"><a href="#">Reply</a></div>
+                                </div>
+                                
+                                <div class="cleaner"></div>
+                            </div>                        
+                            
+                            
+                        </li>
+                        
+                </ol>
+                
+                
+
+
+          		
+                    
+                </div>
+                
+
+                
+                <div id="comment_form">
+                    <h3>留個言吧！</h3>
+                    
+                    <form action="#" method="post">
+                    
+                   <div align="right" > <!--<div class="fb-login-button" data-show-faces="false" data-width="200" data-max-rows="1" onclick="login()">XDDDDDDDDDDDDDDDDDDDD</div>-->
+                   <input type="button"   value="Auto complete with FB" onClick="login()"></input>
+                   <input type="button" value="FB logout" onclick="logout()"></input>
+                   </div>
+                        <div class="form_row">
+                            <label>Name</label>
+                            <br />
+                            <input id="supername" type="text" name="name" >
+                        </div>
+                        <div class="form_row">
+                            <label>Picture</label>
+                            <br />
+                            <img id="superpic_url"></img>
+                        </div>
+                        <div class="form_row">
+                            <label>Comment</label><br />
+                            <textarea  id="QQQ" name="comment" rows="" cols=""></textarea>
+                        </div>
+
+                        <input type="submit" name="GG" value="發文！" class="nodeed" id="sub_btn" onClick=""/>
+                        <input type="button" value="分享！" onclick="popo()"></input>
+                    </form>
+                    
+                
+            	</div>
+                <div class="cleaner h20"></div>    
+                <div class="templatemo_paging">
+                    <ul>
+                        <li><a href="http://www.templatemo.com" target="_parent">Previous</a></li>
+                        <li><a href="http://www.templatemo.com/page/1" target="_parent">1</a></li>
+                        <li><a href="http://www.templatemo.com/page/2" target="_parent">2</a></li>
+                        <li><a href="http://www.templatemo.com/page/3" target="_parent">3</a></li>
+                        <li><a href="http://www.templatemo.com/page/4" target="_parent">4</a></li>
+                        <li><a href="http://www.templatemo.com/page/5" target="_parent">5</a></li>
+                        <li><a href="http://www.templatemo.com/page/6" target="_parent">6</a></li>
+                        <li><a href="http://www.templatemo.com/page/7" target="_parent">Next</a></li>
+                    </ul>
+                </div>    
+                <div class="cleaner h20"></div>    
+		</div> <!-- end of content -->
+        
+        <div id="templatemo_sidebar">
+        
+        	<div class="sb_box">
+            	<h3>Related Posts</h3>
+                <ul class="recent_post">
+                	<li><a href="#">Vivamus imperdiet</a> Sed pretium, neque hendrerit rhoncus accumsan, nibh tellus pharetra neque, quis rutrum elit justo vitae sapien.</li>
+                    <li><a href="#">Nunc ultrices iaculis</a> Cras nisl eros, elementum eu, iaculis vitae, viverra ut, ligula. Pellentesque metus.</li>
+                    <li><a href="#">Duis ultricies nulla</a> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                    <li><a href="#">Proin a elit nisl</a>Donec tincidunt eleifend mauris, ac volutpat leo. Mauris et elit quis mauris aliquet luctus.  </li>
+                    <li><a href="#">Nunc ultrices iaculis</a> Vestibulum lectus sem, porttitor non molestie quis.    Etiam sodales massa vel metus. </li>
+				</ul>
+            </div>
+			<div class="sb_box">
+            <div href="http://www.facebook.com/likemeifyouarehungry" class="fb-like" data-send="false" data-layout="standard" data-width="450" data-show-faces="false" data-colorscheme="light" data-action="like"></div>
+            <div class="fb-facepile" data-href="http://www.facebook.com/likemeifyouarehungry" data-size="medium" data-max-rows="1" data-show-count="false" data-width="300" data-colorscheme="light"></div>
+            <div site="http://www.facebook.com/likemeifyouarehungry" class="fb-activity" data-width="300" data-height="300" data-header="false" data-colorscheme="light" data-linktarget="_blank" data-recommendations="false"></div>
+            <div class="fb-like-box" data-href="http://www.facebook.com/likemeifyouarehungry" data-width="292" data-show-faces="true" data-colorscheme="light" data-stream="false" data-header="false"></div>
+            </div>
+            
+        </div> <!-- end of sidebar -->
+        <div class="cleaner"></div>
+    </div>
+    
+    <div class="cleaner"></div>
+</div>
+
+<div id="templatemo_footer_wrapper">
+    <div id="templatemo_footer">
+        Copyright © 2048 <a href="#">Your Company Name</a> | 
+        Designed by <a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a>
+        <div class="cleaner"></div>
+    </div>
+</div> 
+  
+</body>
+</html>
